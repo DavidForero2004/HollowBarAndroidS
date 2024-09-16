@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -10,17 +9,12 @@
         android:label="The Hollow Bar"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"> <!-- Agrega el tema aquí -->
 
-        <!-- Home Activity -->
+        <!-- Home Activity (Lanzador Principal) -->
         <activity
             android:name=".Home"
-<<<<<<< HEAD
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-=======
->>>>>>> 7926927a06b4700d3b4789fe2cb68b4cdfa62aa5
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,12 +25,12 @@
         <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="true" />
+
+        <!-- MetaData for fonts -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
 
 </manifest>
