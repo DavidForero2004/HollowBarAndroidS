@@ -13,15 +13,8 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_home);
-
-        Button buttonLogin = findViewById(R.id.buttonLogin);
-
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                showPopupMenu(v);
-            }
-        });
     }
 
     private void showPopupMenu(View view) {
@@ -30,17 +23,18 @@ public class Home extends AppCompatActivity {
         MenuInflater inflater = popupMenu.getMenuInflater();
         inflater.inflate(R.menu.popup_menu, popupMenu.getMenu());
 
-        //popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int itemId = item.getItemId();
 
-            //public boolean onMenuItemClick(MenuItem item) {
-                //switch (item.getItemId()) {
-                    //case R.id.optionLogin:
-                        //return true;
-                    //default:
-                        //return false;
-                //}
-            //}
-        //});
+                if (itemId == R.id.option_login) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        });
 
         popupMenu.show();
     }
