@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -15,11 +14,12 @@
         <activity
             android:name=".LoginClient"
             android:exported="false" />
-        <!-- Agrega el tema aquí -->
-        <!-- Home Activity (Lanzador Principal) -->
         <activity
             android:name=".Home"
-            android:exported="true">
+            android:exported="false" />
+        <activity
+            android:name=".LoginEmployee"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
