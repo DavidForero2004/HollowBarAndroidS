@@ -8,8 +8,9 @@
 
     <ImageView
         android:id="@+id/logoHBHome"
-        android:layout_width="313dp"
-        android:layout_height="345dp"
+        android:layout_width="306dp"
+        android:layout_height="314dp"
+        android:background="@drawable/circle_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,8 +20,8 @@
 
     <Button
         android:id="@+id/buttonAsk"
-        android:layout_width="239dp"
-        android:layout_height="143dp"
+        android:layout_width="253dp"
+        android:layout_height="79dp"
         android:background="@drawable/button_border_cwhite"
         android:fontFamily="@font/montserrat_bold"
         android:singleLine="false"
@@ -36,7 +37,8 @@
         android:id="@+id/buttonLogin"
         android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#003B0608"
+        android:layout_marginEnd="4dp"
+        android:background="@android:color/transparent"
         android:text="..."
         android:textColor="@color/white"
         android:textSize="20sp"
