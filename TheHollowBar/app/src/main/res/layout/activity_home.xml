@@ -12,7 +12,6 @@
         android:id="@+id/logoHBHome"
         android:layout_width="306dp"
         android:layout_height="314dp"
-        android:background="@drawable/circle_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,4 +46,5 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

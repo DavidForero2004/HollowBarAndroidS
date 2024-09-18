@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient_login"
-    tools:context=".LoginEmployee">
+    tools:context=".LoginClient">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="120dp"
         android:background="@drawable/login_icon"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="24dp"
         android:layout_gravity="center"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="176dp"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
         android:text="@string/login_text"
@@ -37,25 +37,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
-    <EditText
-        android:id="@+id/inputUser"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="text"
+    <Spinner
+        android:id="@+id/selectTypeDocument"
+        android:layout_width="344dp"
+        android:layout_height="46dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="36dp"
+        android:entries="@array/options_array_type_document"
+        android:hint="@string/login_text_numDocument"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        android:hint="@string/login_text_user"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/inputPassword"
+        android:id="@+id/inputNumDocument"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
@@ -63,30 +59,41 @@
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:importantForAutofill="no"
-        android:inputType="textPassword"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputUser"
-        android:hint="@string/login_text_password"
+        app:layout_constraintTop_toBottomOf="@+id/selectTypeDocument"
+        android:hint="@string/login_text_numDocument"
         android:textColorHint="@color/white"
         android:textColor="@color/white" />
 
+    <Spinner
+        android:id="@+id/selectTable"
+        android:layout_width="344dp"
+        android:layout_height="46dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="36dp"
+        android:entries="@array/options_array_table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNumDocument" />
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonLoginClient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="32dp"
+        android:background="@drawable/button_login"
         android:text="@string/login_text_button"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/button_login"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/selectTable" />
 
     <ImageButton
-        android:id="@+id/buttonBackEmployee"
+        android:id="@+id/buttonBackClient"
         android:layout_width="37dp"
         android:layout_height="45dp"
         android:layout_margin="16dp"
