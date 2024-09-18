@@ -6,16 +6,15 @@
     <string name="login_text_button">Ingresar</string>
     <string name="back_button_description">Regresar</string>
     <string name="login_text_numDocument">Número de documento</string>
+    <string name="login_text_typeDocument">Tipo de documento</string>
 
     <string-array name="options_array_type_document">
-        <item>Tipo de documento</item>
         <item>Opción 1</item>
         <item>Opción 2</item>
         <item>Opción 3</item>
     </string-array>
 
     <string-array name="options_array_table">
-        <item>Mesa</item>
         <item>Opción 1</item>
         <item>Opción 2</item>
         <item>Opción 3</item>
