@@ -22,14 +22,14 @@
         app:srcCompat="@mipmap/ic_launcher_foreground" />
 
     <Button
-        android:id="@+id/buttonLoginClient"
+        android:id="@+id/buttonNextClient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/button_login"
-        android:text="@string/login_text_button"
+        android:text="@string/login_next"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

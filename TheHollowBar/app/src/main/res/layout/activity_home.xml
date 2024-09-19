@@ -8,43 +8,4 @@
     android:background="@drawable/background_gradient_login"
     tools:context=".Home">
 
-    <ImageView
-        android:id="@+id/logoHBHome"
-        android:layout_width="306dp"
-        android:layout_height="314dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22000003"
-        app:srcCompat="@mipmap/ic_launcher_foreground" />
-
-    <Button
-        android:id="@+id/buttonAsk"
-        android:layout_width="253dp"
-        android:layout_height="79dp"
-        android:background="@drawable/button_border_cwhite"
-        android:fontFamily="@font/montserrat_bold"
-        android:singleLine="false"
-        android:text="Hacer pedido"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/logoHBHome" />
-
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="88dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:background="@android:color/transparent"
-        android:text="..."
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

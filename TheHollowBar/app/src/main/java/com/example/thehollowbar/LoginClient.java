@@ -1,6 +1,9 @@
 package com.example.thehollowbar;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -20,6 +23,7 @@ public class LoginClient extends AppCompatActivity {
         ImageButton buttonBack = findViewById(R.id.buttonBackClient);
         TextView selectTypeDocument = findViewById(R.id.selectTypeDocument);
         TextView selectTable = findViewById(R.id.selectTable);
+        Button buttonNext = findViewById(R.id.buttonNextClient);
 
         final String[] optionsTypeDocument = getResources().getStringArray(R.array.options_array_type_document);
         final String[] optionsTable = getResources().getStringArray(R.array.options_array_table);
@@ -44,6 +48,14 @@ public class LoginClient extends AppCompatActivity {
                 selectTable.setText(optionsTable[which]);
             });
             builder.show();
+        });
+
+        buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginClient.this, AskFor.class);
+                startActivity(intent);
+            }
         });
     }
 }
