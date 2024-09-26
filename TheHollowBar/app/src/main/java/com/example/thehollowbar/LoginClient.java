@@ -39,8 +39,8 @@ public class LoginClient extends AppCompatActivity {
                 selectTypeDocument.setText(optionsTypeDocument[which]);
             });
             builder.show();
-        });
 
+        });
         selectTable.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(LoginClient.this);
             builder.setTitle("Mesa");

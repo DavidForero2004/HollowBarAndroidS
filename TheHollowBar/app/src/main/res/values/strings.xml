@@ -8,6 +8,9 @@
     <string name="login_text_numDocument">Número de documento</string>
     <string name="login_text_typeDocument">Tipo de documento</string>
     <string name="login_next">Siguiente</string>
+    <string name="orders_title">Tus Órdenes</string>
+    <string name="no_orders_available">No hay órdenes disponibles</string>
+    <string name="create_order_button">Crear Orden</string>
 
     <string-array name="options_array_type_document">
         <item>Opción 1</item>
@@ -20,4 +23,13 @@
         <item>Opción 2</item>
         <item>Opción 3</item>
     </string-array>
+
+
+        <string-array name="product_list">
+            <item>Producto 1</item>
+            <item>Producto 2</item>
+            <item>Producto 3</item>
+        </string-array>
+
+
 </resources>
