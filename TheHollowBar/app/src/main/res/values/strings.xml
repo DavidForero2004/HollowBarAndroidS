@@ -8,6 +8,7 @@
     <string name="login_text_numDocument">Número de documento</string>
     <string name="login_text_typeDocument">Tipo de documento</string>
     <string name="login_next">Siguiente</string>
+    <string name="home_button">Hacer pedido</string>
 
     <!-- Versión de Brandon -->
     <string name="home_button">Hacer pedido</string>
