@@ -39,25 +39,27 @@
 
     <EditText
         android:id="@+id/inputUser"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
+        android:hint="@string/login_text_user"
         android:importantForAutofill="no"
         android:inputType="text"
+        android:padding="15dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:background="@drawable/input_design"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        android:hint="@string/login_text_user"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/inputPassword"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
@@ -69,7 +71,9 @@
         app:layout_constraintTop_toBottomOf="@+id/inputUser"
         android:hint="@string/login_text_password"
         android:textColorHint="@color/white"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:background="@drawable/input_design"
+        android:padding="15dp" />
 
     <Button
         android:id="@+id/button"

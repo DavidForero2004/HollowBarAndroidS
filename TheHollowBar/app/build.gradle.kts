@@ -43,8 +43,8 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.activity:activity:1.9.1")
     implementation("com.google.android.material:material:1.9.0")
-    implementation("com.airbnb.android:lottie:5.0.3")
-    implementation("com.google.android.gms:play-services-maps:19.0.0") // Versión actualizada de Lottie
+    implementation("com.airbnb.android:lottie:6.0.0")
+    implementation("com.google.android.gms:play-services-maps:19.0.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
