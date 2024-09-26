@@ -25,12 +25,12 @@ public class Order extends AppCompatActivity {
         // Lógica para volver atrás con confirmación
         buttonBack.setOnClickListener(v -> showExitConfirmationDialog());
 
-        // Lógica para crear un nuevo pedido y navegar a AskForEmployee
-        buttonCreateOrder.setOnClickListener(v -> openAskForEmployeeActivity());
+        // Lógica para crear un nuevo pedido y navegar a AskFor
+        buttonCreateOrder.setOnClickListener(v -> openAskForActivity());
     }
 
-    private void openAskForEmployeeActivity() {
-        Intent intent = new Intent(this, AskForEmployee.class);
+    private void openAskForActivity() {
+        Intent intent = new Intent(this, AskFor.class);
         startActivity(intent);
     }
 

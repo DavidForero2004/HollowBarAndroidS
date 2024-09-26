@@ -24,8 +24,8 @@
 
     <LinearLayout
         android:id="@+id/containerOrderList"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="362dp"
+        android:layout_height="555dp"
         android:layout_margin="16dp"
         android:background="@android:color/transparent"
         android:orientation="vertical"
@@ -33,7 +33,8 @@
         app:layout_constraintBottom_toTopOf="@id/buttonCreateOrder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtOrders">
+        app:layout_constraintTop_toBottomOf="@id/txtOrders"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:layout_width="wrap_content"
@@ -55,17 +56,20 @@
 
     <Button
         android:id="@+id/buttonCreateOrder"
-        android:layout_width="253dp"
-        android:layout_height="79dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/button_border_cwhite"
         android:fontFamily="@font/montserrat_bold"
+        android:padding="16dp"
         android:text="@string/create_order_button"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/containerOrderList" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

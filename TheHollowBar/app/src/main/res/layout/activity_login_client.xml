@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +6,27 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient_login"
     tools:context=".LoginClient">
+
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/shape_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_animation2"
+            android:layout_width="153dp"
+            android:layout_height="151dp"
+            android:layout_marginBottom="384dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/spincircle" />
+    </FrameLayout>
 
     <ImageView
         android:id="@+id/imageView"
@@ -23,52 +43,55 @@
 
     <Button
         android:id="@+id/buttonNextClient"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/button_login"
         android:text="@string/login_next"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectTable" />
+        app:layout_constraintTop_toBottomOf="@+id/selectTable"
+        app:layout_constraintWidth_percent="0.8" />
 
     <TextView
         android:id="@+id/labelTable"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Mesa"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/selectTable"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
 
     <TextView
         android:id="@+id/selectTable"
-        android:layout_width="368dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="36dp"
-        android:drawableRight="@android:drawable/arrow_down_float"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
         android:padding="16dp"
         android:text="Selecciona una opción"
+        android:background="@drawable/input_design"
         android:textColor="@color/white"
         android:textSize="18sp"
+        app:drawableRightCompat="@android:drawable/arrow_down_float"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputNumDocument" />
+        app:layout_constraintTop_toBottomOf="@+id/inputNumDocument"
+        app:layout_constraintWidth_percent="0.9" />
 
     <TextView
         android:id="@+id/txtLogIn"
         android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="152dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="176dp"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
         android:text="@string/login_text"
@@ -81,54 +104,63 @@
 
     <EditText
         android:id="@+id/inputNumDocument"
-        android:layout_width="352dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:digits="0123456789"
         android:ems="10"
         android:hint="@string/login_text_numDocument"
         android:importantForAutofill="no"
         android:inputType="number"
+        android:padding="15dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:background="@drawable/input_design"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectTypeDocument" />
+        app:layout_constraintTop_toBottomOf="@+id/selectTypeDocument"
+        app:layout_constraintWidth_percent="0.9" />
 
     <TextView
         android:id="@+id/labelTypeDocument"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:text="Tipo de documento"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/selectTypeDocument"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
 
     <TextView
         android:id="@+id/selectTypeDocument"
-        android:layout_width="368dp"
-        android:layout_height="57dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="60dp"
-        android:drawableRight="@android:drawable/arrow_down_float"
-        android:padding="16dp"
+        android:layout_marginEnd="10dp"
+        android:padding="15dp"
         android:text="Selecciona una opción"
         android:textColor="@color/white"
         android:textSize="18sp"
+        android:background="@drawable/input_design"
+        app:drawableRightCompat="@android:drawable/arrow_down_float"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9"
         app:layout_constraintTop_toBottomOf="@+id/txtLogIn" />
 
     <ImageButton
         android:id="@+id/buttonBackClient"
-        android:layout_width="37dp"
-        android:layout_height="45dp"
+        android:layout_width="38dp"
+        android:layout_height="39dp"
         android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="@mipmap/arrow_left_foreground"
         android:contentDescription="@string/back_button_description"
         android:padding="16dp"
