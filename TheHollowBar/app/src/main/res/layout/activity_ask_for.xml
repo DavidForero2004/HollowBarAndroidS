@@ -186,4 +186,18 @@
         app:layout_constraintTop_toBottomOf="@+id/view"
         app:layout_constraintWidth_percent="0.8" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="21dp"
+        android:layout_height="22dp"
+        android:background="@drawable/circle_shape"
+        android:gravity="center"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonCart"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonCart"
+        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonCart"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonCart"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
