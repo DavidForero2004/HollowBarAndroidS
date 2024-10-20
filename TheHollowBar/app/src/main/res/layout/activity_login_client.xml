@@ -88,6 +88,17 @@
         app:layout_constraintWidth_percent="0.9" />
 
     <TextView
+        android:id="@+id/errorTable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/selectTable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <TextView
         android:id="@+id/txtLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -153,6 +164,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintWidth_percent="0.9"
         app:layout_constraintTop_toBottomOf="@+id/txtLogIn" />
+
+    <TextView
+        android:id="@+id/errorTypeDocument"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectTypeDocument"
+        app:layout_constraintWidth_percent="0.9" />
 
     <ImageButton
         android:id="@+id/buttonBackClient"

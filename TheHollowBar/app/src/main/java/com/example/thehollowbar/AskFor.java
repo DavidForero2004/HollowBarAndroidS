@@ -63,34 +63,27 @@ public class AskFor extends AppCompatActivity {
         int[] cartLocation = new int[2];
         imageButtonCart.getLocationInWindow(cartLocation);
 
-        // Reseteamos la posición inicial del producto volador
         imgFlyingProduct.setTranslationX(0);
         imgFlyingProduct.setTranslationY(0);
 
-        // Calculamos la distancia a mover (coordenadas de destino)
         float deltaX = cartLocation[0] - imgFlyingProduct.getWidth() / 2 + imageButtonCart.getWidth() / 2;
         float deltaY = cartLocation[1] - imgFlyingProduct.getHeight() / 2 + imageButtonCart.getHeight() / 2;
 
-        // Creamos las animaciones
         ObjectAnimator moveToCartX = ObjectAnimator.ofFloat(imgFlyingProduct, View.TRANSLATION_X, deltaX);
         ObjectAnimator moveToCartY = ObjectAnimator.ofFloat(imgFlyingProduct, View.TRANSLATION_Y, deltaY);
 
-        // Establecemos la duración y las interpolaciones
-        moveToCartX.setDuration(3000);  // Puedes ajustar la duración
+        moveToCartX.setDuration(3000);
         moveToCartY.setDuration(3000);
         moveToCartX.setInterpolator(new DecelerateInterpolator());
         moveToCartY.setInterpolator(new DecelerateInterpolator());
 
-        // Combinamos las animaciones
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(moveToCartX, moveToCartY);
         animatorSet.start();
 
-        // Agregamos un listener para ocultar el círculo al final de la animación
         animatorSet.addListener(new android.animation.AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(android.animation.Animator animation) {
-                // Hacer invisible el círculo cuando la animación termina
                 imgFlyingProduct.setVisibility(View.INVISIBLE);
             }
         });
