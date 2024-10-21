@@ -10,7 +10,7 @@ public class ApiClient {
         if (retrofit == null) {
             
             retrofit = new Retrofit.Builder()
-                    .baseUrl("https://propuesta-bar-1.onrender.com/")
+                    .baseUrl("http://192.168.1.13:3000/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }

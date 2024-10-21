@@ -6,8 +6,9 @@ public class Order {
     private int num_document;
     private int id_table;
     private int id_status;
+    private String order_date; // Añadir este campo
 
-    //Getters
+    // Getters
     public int getId() {
         return id;
     }
@@ -24,15 +25,15 @@ public class Order {
         return id_table;
     }
 
-    public void setId_table(int id_table) {
-        this.id_table = id_table;
-    }
-
     public int getId_status() {
         return id_status;
     }
 
-    //Setters
+    public String getOrder_date() { // Añadir el getter para order_date
+        return order_date;
+    }
+
+    // Setters
     public void setId(int id) {
         this.id = id;
     }
@@ -45,7 +46,15 @@ public class Order {
         this.num_document = num_document;
     }
 
+    public void setId_table(int id_table) {
+        this.id_table = id_table;
+    }
+
     public void setId_status(int id_status) {
         this.id_status = id_status;
+    }
+
+    public void setOrder_date(String order_date) { // Añadir el setter para order_date
+        this.order_date = order_date;
     }
 }

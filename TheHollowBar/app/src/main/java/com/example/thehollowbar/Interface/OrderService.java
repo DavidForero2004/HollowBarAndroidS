@@ -1,6 +1,7 @@
 package com.example.thehollowbar.Interface;
 
 import com.example.thehollowbar.models.Order;
+import com.example.thehollowbar.models.OrderResponse;
 
 import java.util.List;
 
@@ -14,5 +15,5 @@ public interface OrderService {
     Call<List<Order>> getOrder();
 
     @POST("orders/orderclient")
-    Call<List<Order>> getOrderClient(@Body Order order);
+    Call<OrderResponse> getOrderClient(@Body Order order);
 }

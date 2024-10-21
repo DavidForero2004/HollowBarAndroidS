@@ -12,22 +12,21 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.thehollowbar.Interface.OrderService;
 import com.example.thehollowbar.models.Order;
+import com.example.thehollowbar.models.OrderResponse;
 import com.example.thehollowbar.network.ApiClient;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import com.google.gson.internal.LinkedTreeMap;
 
 public class LoginClient extends AppCompatActivity {
 
@@ -124,29 +123,61 @@ public class LoginClient extends AppCompatActivity {
                 orderRq.setNum_document(numDocumentInt);
                 orderRq.setId_table(id_table);
 
-                try {
-                    Call<List<Order>> call = orderService.getOrderClient(orderRq);
-                    call.enqueue(new Callback<List<Order>>() {
-                        @Override
-                        public void onResponse(Call<List<Order>> call, Response<List<Order>> response) {
-                            if (response.isSuccessful() && response.body() != null) {
-                                Intent intent = new Intent(LoginClient.this, AskFor.class);
-                                startActivity(intent);
-                            } else {
-                                Toast.makeText(LoginClient.this, "Error en la respuesta: " + response.message() + " Código: " + response.code(), Toast.LENGTH_LONG).show();
-                                Log.e("API_RESPONSE_ERROR", "Error: " + response.message() + " Código: " + response.code());
-                            }
-                        }
+                Call<OrderResponse> call = orderService.getOrderClient(orderRq);
+                call.enqueue(new Callback<OrderResponse>() {
+                    @Override
+                    public void onResponse(Call<OrderResponse> call, Response<OrderResponse> response) {
+                        if (response.isSuccessful() && response.body() != null) {
+                            List<Object> resultList = response.body().getResult();
+                            if (!resultList.isEmpty() && resultList.get(0) instanceof List) {
+                                List<?> innerList = (List<?>) resultList.get(0);
+                                if (!innerList.isEmpty()) {
+                                    Log.d("Debug", "Tipo del primer elemento en innerList: " + innerList.get(0).getClass().getName());
 
-                        @Override
-                        public void onFailure(Call<List<Order>> call, Throwable t) {
-                            Toast.makeText(LoginClient.this, "Error de conexión: " + t.getMessage(), Toast.LENGTH_LONG).show();
-                            Log.e("API_ERROR", "Error: " + t.getMessage());
+                                    List<Order> orderList = new ArrayList<>();
+                                    for (Object item : innerList) {
+                                        if (item instanceof LinkedTreeMap) {
+                                            LinkedTreeMap<?, ?> map = (LinkedTreeMap<?, ?>) item;
+                                            Order order = new Order();
+
+                                            order.setId(((Double) map.get("id")).intValue());
+                                            order.setType_document((String) map.get("type_document"));
+                                            order.setNum_document(((Double) map.get("num_document")).intValue());
+                                            order.setId_table(((Double) map.get("id_table")).intValue());
+                                            order.setId_status(((Double) map.get("id_status")).intValue());
+                                            order.setOrder_date((String) map.get("order_date"));
+
+                                            orderList.add(order);
+                                        }
+                                    }
+
+                                    if (!orderList.isEmpty()) {
+                                        Order orderResponseQ = orderList.get(0);
+
+                                        Log.d("Order Debug", "ID: " + orderResponseQ.getId() + ", Tipo de documento: " + orderResponseQ.getType_document());
+
+                                        /* Intent intent = new Intent(LoginClient.this, AskFor.class);
+                                           intent.putExtra("orderId", orderResponseQ.getId());
+                                           startActivity(intent); */
+                                    } else {
+                                        Toast.makeText(LoginClient.this, "No se encontraron órdenes.", Toast.LENGTH_LONG).show();
+                                    }
+                                } else {
+                                    Toast.makeText(LoginClient.this, "La lista interna está vacía.", Toast.LENGTH_LONG).show();
+                                }
+                            } else {
+                                Toast.makeText(LoginClient.this, "Formato de respuesta inesperado.", Toast.LENGTH_LONG).show();
+                            }
+                        } else {
+                            Toast.makeText(LoginClient.this, "Error en la respuesta: " + response.message(), Toast.LENGTH_LONG).show();
                         }
-                    });
-                } catch (Exception e) {
-                    System.out.println(e);
-                }
+                    }
+
+                    @Override
+                    public void onFailure(Call<OrderResponse> call, Throwable t) {
+                        Toast.makeText(LoginClient.this, "Fallo en la conexión: " + t.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
             }
         });
     }
