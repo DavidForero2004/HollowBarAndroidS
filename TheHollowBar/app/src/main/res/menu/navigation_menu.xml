@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@mipmap/home_foreground" />
+    <item
+        android:id="@+id/nav_camera"
+        android:icon="@mipmap/photo_foreground" />
+    <item
+        android:id="@+id/nav_person"
+        android:icon="@mipmap/person_foreground" />
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@mipmap/menu_foreground" />
+</menu>

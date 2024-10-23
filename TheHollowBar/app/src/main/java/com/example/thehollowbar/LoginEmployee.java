@@ -152,9 +152,9 @@ public class LoginEmployee extends AppCompatActivity {
                             editor.putString("token", token);
                             editor.apply();
 
-//                            Intent intent = new Intent(LoginEmployee.this, Home.class);
-//                            startActivity(intent);
-//                            finish();
+                            Intent intent = new Intent(LoginEmployee.this, Dashboard.class);
+                            startActivity(intent);
+                            finish();
                         } else {
                             String errorMessage;
 
