@@ -10,6 +10,8 @@
     <string name="login_next">Siguiente</string>
     <string name="home_button">Hacer pedido</string>
 
+
+
     <string-array name="options_array_type_document">
         <item>Opción 1</item>
         <item>Opción 2</item>
