@@ -8,13 +8,20 @@ public class ApiClient {
 
     public static Retrofit getClient() {
         if (retrofit == null) {
-            
+            // Validar si estamos en un emulador o dispositivo físico
+            String baseUrl = "http://192.168.43.85:3000/";
+
             retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.1.13:3000/")
+                    .baseUrl(baseUrl)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
 
         return retrofit;
+    }
+
+    // Método para detectar si estamos en un emulador
+    private static boolean isEmulator() {
+        return android.os.Build.FINGERPRINT.contains("generic");
     }
 }

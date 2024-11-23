@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "466942180519",
+    "project_id": "the-hollow-bar-ab1e0",
+    "storage_bucket": "the-hollow-bar-ab1e0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466942180519:android:2fc1afccc0a81d55a2af82",
+        "android_client_info": {
+          "package_name": "com.example.thehollowbar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466942180519-ntva41i3q8um85agn04htjggs3qmo4c1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.thehollowbar",
+            "certificate_hash": "d504f1924a3dca805027e7ee164d259744ff5a20"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7rA98jprkoPPAuS_g_fl7zu-6ZVdX30g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

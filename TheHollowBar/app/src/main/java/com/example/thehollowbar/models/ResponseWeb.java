@@ -2,7 +2,7 @@ package com.example.thehollowbar.models;
 
 import java.util.List;
 
-public class OrderResponse {
+public class ResponseWeb {
     private List<Object> result;
 
     public List<Object> getResult() {

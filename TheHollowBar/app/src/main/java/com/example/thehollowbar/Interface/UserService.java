@@ -15,4 +15,7 @@ public interface UserService {
 
     @POST("users/login")
     Call<UserResponse> loginUser(@Body User user);
+
+    @POST("users/loginemail")
+    Call<UserResponse> loginEmail(@Body User user);
 }
